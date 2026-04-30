@@ -46,4 +46,3 @@ def scrape_url(url: str) -> str:
 
 
 
-print(scrape_url.invoke("https://www.forbes.com/sites/stuartanderson/2025/12/04/unprepared-companies-at-risk-in-h-1b-visa-immigration-crackdown/"))
