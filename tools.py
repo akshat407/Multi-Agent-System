@@ -5,7 +5,11 @@ from tavily import TavilyClient
 import os 
 from dotenv import load_dotenv
 from rich import print
-load_dotenv()
+import os
+import streamlit as st
+
+os.environ["GOOGLE_API_KEY"] = st.secrets["GOOGLE_API_KEY"]
+os.environ["TAVILY_API_KEY"] = st.secrets["TAVILY_API_KEY"]
 
 tavily=TavilyClient(api_key=os.getenv("TAVILY_API_KEY"))
 

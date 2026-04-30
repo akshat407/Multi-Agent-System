@@ -6,7 +6,12 @@ from langchain_core.output_parsers import StrOutputParser
 from tools import web_search , scrape_url 
 from dotenv import load_dotenv
 
-load_dotenv()
+
+import os
+import streamlit as st
+
+os.environ["GOOGLE_API_KEY"] = st.secrets["GOOGLE_API_KEY"]
+os.environ["TAVILY_API_KEY"] = st.secrets["TAVILY_API_KEY"]
 
 #model setup 
 llm = ChatGoogleGenerativeAI(
